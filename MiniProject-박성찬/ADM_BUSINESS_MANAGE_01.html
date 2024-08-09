@@ -66,8 +66,8 @@
 
                     let tdName = document.createElement("td");
                     let a = document.createElement("a");
-                    a.href = storage[i].url; // URL을 href 속성에 추가
-                    a.innerHTML = storage[i].name; // 링크 텍스트s는 name
+                    a.href = storage[i].url;
+                    a.innerHTML = storage[i].name; 
                     a.onclick = function () {
                       localStorage.setItem(
                         "selectedUser",
