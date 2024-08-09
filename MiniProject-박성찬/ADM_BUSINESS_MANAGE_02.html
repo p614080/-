@@ -67,15 +67,7 @@
         document.getElementById("email").innerHTML =`${userData.email}`;
         document.getElementById("phonnumber").innerHTML =`${userData.phonnumber}`;
         document.getElementById("signupdate").innerHTML =`${userData.signupdate}`;
-        document.getElementById("approve").innerHTML =`${userData.approve}`;
-        document.getElementById("details").innerHTML = `
-              이름: ${userData.name}<br>
-              아이디: ${userData.id}<br>
-              이메일: ${userData.email}<br>
-              전화번호: ${userData.phonnumber}<br>
-              가입날짜: ${userData.signupdate}<br>
-              승인여부: ${userData.approve}
-          `;
+        document.getElementById("approve").innerHTML =`${userData.approve}`;       
       } else {
         document.getElementById("details").innerHTML = "데이터가 없습니다.";
       }
