@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>질문QnA</title>
+    <title>예약문의</title>
     <link rel="stylesheet" href="./CsQuestion.css">
-    <script src="CsQuestion.js"></script>
+    <script src="CsReservation.js"></script>
 </head>
 <body>
     <div class="body_div">
         <div class="menu_div">
-            <a href="./CsQuestion.html">질문QnA</a>
+            <a href="./CsReservation.html">예약문의</a>
             <input type="search" id="search" placeholder="내용을 입력하세요">
             <input type="button" id="button" value="검색" onclick="checkSearch()">
         </div>
@@ -47,13 +47,13 @@
             }
         }
 
-        function loadCsQuestion() {
+        function loadCsReservation() {
             const tableBody = document.getElementById('tableBody');  // 테이블 본문 요소를 가져옴
 
-            csquestion.forEach(item => {
+            csreservation.forEach(item => {
                 const row = document.createElement('tr');  // 새로 추가할때마다 tr태그써서 행을 생성을 해서 row 변수에 담음
                 row.className = 'table_row';  // 행에 클래스 이름을 설정
-                row.onclick = () => location.href = 'CsQuestionDetail.html';  // 행을 클릭하면 상세 페이지로 이동
+                row.onclick = () => location.href = 'CsReservationDetail.html';  // 행을 클릭하면 상세 페이지로 이동
 
                 // 번호
                 const num = document.createElement('td');  // 번호 셀을 생성
@@ -86,7 +86,7 @@
         }
 
         // 데이터 가져오기 함수 호출
-        loadCsQuestion();
+        loadCsReservation();
     </script>
 </body>
 </html>

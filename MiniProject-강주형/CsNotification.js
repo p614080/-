@@ -2,17 +2,17 @@ const notifications = [
     {
         "num": 1,
         "title": "불꽃축제",
-        "text":"재미있습니다",
+        "text":"주소는 광안리입니다",
         "CreatedDay": "2024.08.08",
-        "member": "강씨",
+        "member": "관리자",
         "Views": 2
     },
     {
         "num": 2,
         "title": "바다축제",
-        "text":"재미없습니다",
+        "text":"해운대에서 축제합니다",
         "CreatedDay": "2024.08.09",
-        "member": "이씨",
+        "member": "관리자",
         "Views": 10
     },
     {
@@ -20,7 +20,7 @@ const notifications = [
         "title": "행사 취소되었습니다",
         "text":"죄송합니다",
         "CreatedDay": "2024.08.12",
-        "member": "박씨",
+        "member": "관리자",
         "Views": 8
     }
 ];
