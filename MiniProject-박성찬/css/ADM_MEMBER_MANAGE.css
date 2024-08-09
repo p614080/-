@@ -5,7 +5,7 @@
 }
 #logo{
   object-fit: scale-down;
-  height: 50px;
+  height: 100px;
   position: absolute;
 }
 #headmenu{
@@ -34,15 +34,20 @@ aside{
 .container {
   display: flex;
   justify-content: center;
+  margin-left: 3px;
+  width: 1500px;
+  height: 1000px;
+  border: 1px solid black;
 }
 
 .btn {
   margin: 9px;
+  margin-top: 250px;
   font-size: 22px;
   font-weight: bold;
   text-decoration: none;
   color: black;
-  padding: 40px 30px;
+  padding: 100px 150px;
   display: inline-block;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.21);
