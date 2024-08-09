@@ -1,10 +1,15 @@
+
 .headcontainer{
   height: 150px;
-  border: 1px solid black;
-  
+  border: 1px solid black;  
+}
+#logo{
+  object-fit: scale-down;
+  height: 50px;
+  position: absolute;
 }
 #headmenu{
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 1%;
   margin-right: 1%;
   margin-bottom: 10px;
@@ -12,6 +17,7 @@
   background-color: #F67280;
   border-radius: 15px;
 }
+
 .sidecontainer {
   display: inline-flex;
 }
