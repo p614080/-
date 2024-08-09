@@ -1,0 +1,28 @@
+[
+  {
+    "name":"(주)자바2차반",
+    "id": "java2",
+    "email": "java2@naver.com",
+    "phonnumber":"010-1234-3607",
+    "signupdate":"2024-08-07",
+    "approve":"승인"
+  },
+  {
+    "name":"수영구청",
+    "id": "suyounggu",
+    "email": "suyoung123@email.com",
+    "phonnumber":"051-239-4829",
+    "signupdate":"2023-02-23",
+    "approve":"미승인"
+  },
+  {
+    "name":"",
+    "id": "",
+    "email": "",
+    "phonnumber":"",
+    "signupdate":"",
+    "approve":""
+  }
+]
+
+

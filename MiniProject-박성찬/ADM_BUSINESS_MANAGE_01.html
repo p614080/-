@@ -2,21 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0" />
     <title>기업회원리스트페이지</title>
     <link rel="stylesheet" href="./css/ADM_BUSINESS_MANAGE_01.css" />
 
     <div class="headcontainer">
       <div id="headmenu"></div>
     </div>
-
   </head>
   <body>
     <div class="sidecontainer">
       <aside>
         <div class="container" id="sidemenuname">사이드바</div>
       </aside>
-      
+
       <div>
         <div class="container">
           <div class="item">
@@ -43,174 +42,46 @@
         </div>
         <div class="container tb">
           <table>
-            <tr>
-              <th></th>
-              <th>이름</th>
-              <th>아이디</th>
-              <th>이메일</th>
-              <th>전화번호</th>
-              <th>가입날짜</th>
-            </tr>
-            <tr>
-              <th>1</th>
-              <th><a href="./ADM_BUSINESS_MANAGE_02.html">자바2차반</a></th>
-              <th>java2</th>
-              <th>java2@naver.com</th>
-              <th>010-1234-3607</th>
-              <th>2024-08-07</th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
+            <thead>
+              <tr>
+                <th>이름</th>
+                <th>아이디</th>
+                <th>이메일</th>
+                <th>전화번호</th>
+                <th>가입날짜</th>
+                <th>승인여부</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td>name</td>
+                <td>id</td>
+                <td>email</td>
+                <td>phonumber</td>
+                <td>signupdate</td>
+                <td>approve</td>
+              </tr>
+            </tfoot>
+            <tbody></tbody>
+            <script>
+              let xhttp = new XMLHttpRequest();
+              xhttp.open("GET", "/json/business_member.json", true);
+              xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                  let storage = JSON.parse(this.response);
+                  for (i in storage.data) {
+                    let tr = document.createElement("tr");
+                    for (let j = 0; j < 6; j++) {
+                      let td = document.createElement("td");
+                      td.innerHTML = storage.data[i][j];
+                      tr.appendChild(td);
+                    }
+                    document.querySelector("tbody").appendChild(tr);
+                  }
+                }
+              };
+              xhttp.send();
+            </script>
           </table>
         </div>
         <div class="container page_num">
@@ -230,5 +101,9 @@
       </div>
     </div>
   </body>
-  <iframe src="/MiniProject-박성찬/Footer.html" style="width: 100%;" frameborder="0"></iframe>
+  <iframe
+    src="/MiniProject-박성찬/Footer.html"
+    style="width: 100%"
+    frameborder="0"
+  ></iframe>
 </html>
