@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>질문QnA</title>
+    <link rel="stylesheet" href="./CsQuestion.css">
+</head>
+<body>
+    <div class="body_div">
+        <div class="menu_div">
+            <a href="./CsNotification.html">질문QnA</a>
+            <input type="search" id="search" placeholder="내용을 입력하세요">
+            <input type="button" id="button" value="검색" onclick="checkSearch()">
+        </div>
+
+        <div class="table_div">
+            <table>
+                <tr>
+                    <td>번호</td>
+                    <td>제목</td>
+                    <td>등록일</td>
+                    <td>작성자</td>
+                    <td>조회수</td>
+                </tr>
+                <tr class="table_row" onclick="location.href='CsNotificationDetail.html';">
+                    <td>1</td>
+                    <td>행사취소</td>
+                    <td>2024.08.08</td>
+                    <td>강씨</td>
+                    <td>5</td>
+                </tr>
+            </table>
+        </div>
+        <div class="page_div">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+        </div>
+        <div>
+            <input type="button" id="writing" value="글쓰기" onclick="location.href='CsWriting.html';">
+        </div>
+    </div>
+
+    <script>
+        function checkSearch() {
+            if (document.getElementById('search').value == "") {
+                alert("내용을 입력하세요");
+            }
+        }
+
+    </script>
+</body>
+</html>

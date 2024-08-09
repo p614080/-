@@ -1,0 +1,50 @@
+#eventPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 40px;
+}
+
+.filter-btn {
+  width: 130px;
+  height: 40px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 10px;
+  font-size: 0.9em;
+  background:#C06C84;
+}
+
+.filter-btn:hover {
+    background-color: #F67280;
+    transition: 0.5s ease-out;
+  }
+
+ #festival {
+    display: flex; /* Flexbox 사용 */
+    list-style-type: none; /* 기본 목록 스타일 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    margin: 0; /* 기본 마진 제거 */
+}
+#festival li {
+    margin: 0 20px 20px 20px; /* 양옆(좌우) 여백을 동일하게 설정 */
+    width: calc(100% - 40px);
+    margin-right: 100px; /* 항목 간의 간격 설정 (선택 사항) */
+    margin-bottom: 20px; /* 리스트 항목 사이의 간격 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+}
+#festival img {
+    display: block; /* 이미지의 여백 제거 */
+    width: 250px;
+    height: 350px;
+}
+
+#festival p {
+    border: 1px solid gray;
+    font-weight: bold;
+    margin-top: 10px; /* 이미지와 텍스트 사이의 간격 */
+    font-size: 14px; /* 텍스트 크기 설정 */
+    color: #333; /* 텍스트 색상 설정 */
+}
