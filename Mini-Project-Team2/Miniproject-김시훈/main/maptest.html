@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Change</title>
+    <style>
+        /* 이미지가 마우스 오버될 때 변경될 이미지 */
+        .image-wrapper img.hover-image {
+            display: none;
+        }
+
+        .image-wrapper:hover img.original-image {
+            display: none;
+        }
+
+        .image-wrapper:hover img.hover-image {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-wrapper">
+    <!-- 원본 이미지 -->
+    <img src="./images/background.png" alt="Original Image" class="original-image" usemap="#image-map">
+
+    <!-- 호버 이미지 -->
+    <img src="./images/gangseo.png" alt="Hover Image" class="hover-image">
+
+    <!-- 이미지 맵 정의 -->
+    <map name="image-map">
+        <!-- 이미지 맵 영역을 다각형으로 설정 -->
+        <area shape="poly" coords="x1,y1,x2,y2,...,xn,yn" href="#">
+    </map>
+</div>
+
+</body>
